@@ -6,7 +6,10 @@ If you need a fast way to instrument user/kernel/hypervisor then you have custom
 
 ![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-1.jpg)
 
-Instructions (*optionally gp registers and r/e flags) will be saved into files.
+
+
+Instructions (and optionally gp registers and r/e flags) will be saved into files.
+
 ![QEMU Saved Instr. with GP and flags](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-3.PNG)
 
 ## How to use
