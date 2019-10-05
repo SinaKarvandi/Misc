@@ -1,6 +1,6 @@
-# custom-qemu-for-instrumentation
+# Custom QEMU for Instrumentation
 
-If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option. 
+If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option. As the TCG plugins are much slower than using this method, so I prefer to have a custom QEMU. This project might not work on the future versions of QEMU but in such case, it'll be updated.
 
 **This project only works for x86 and AMD64 emulator version of QEMU.**
 
