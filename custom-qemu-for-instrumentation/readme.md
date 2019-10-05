@@ -1,15 +1,30 @@
 # Custom QEMU for Instrumentation
 
-If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option. As the TCG plugins are much slower than using this method, so I prefer to have a custom QEMU. This project might not work on the future versions of QEMU but in such case, it'll be updated.
+If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option. As the TCG plugins are much slower than using this method, so I prefer to have a custom QEMU. This project might not work on the future versions of QEMU but in such case, it'll be updated. You can also save r/e flags and general purpose registers based on your needs.
 
 **This project only works for x86 and AMD64 emulator version of QEMU.**
 
 ![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-1.jpg)
 ## How to use
+Copy the translate file into your QEMU Source path and replace this file with `/qemu/target/i386/translate.c`.
 
+Make sure to see the below section about configuration.
 
+## Configuratioon
+You have to change the path to save the logs of instrumentation in the translate.c.
 
-## Build 
+Take a look at this picture :
+![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-4.jpg)
+
+Set the "save_path" to the path you want to save the instrumentation results. (you have to use `%d` in your path as number to add into each instrumentation log.)
+
+* You can also use `packet_capacity`, modify this constant will increase/decrease the amount of instructions to be saved.
+* If you don't need hex assemlies the undefine `save_assembly_hex_bytes`.
+* If you don't need general purpose and r/e flags to be saved then undefine `save_gp_registers`.
+* If you don't wanna see debug messages then undefine `my_debug`.
+* If you undefine `modify_qemu` all the modifications to qemu will be ignored.
+
+## Build QEMU
 The build instructions come from : (https://stackoverflow.com/questions/53084815/compile-qemu-under-windows-10-64-bit-for-windows-10-64-bit)
 
 Here's a complete step-by-step guide for compiling qemu-system-x86\_64.exe:
@@ -32,7 +47,7 @@ Guide based on: [https://wiki.qemu.org/Hosts/W32#Native\_builds\_with\_MSYS2](ht
     *   git submodule update --init capstone
     *   git submodule update --init dtc
 *   Insert void \_\_stack\_chk\_fail(void); void \_\_stack\_chk\_fail(void) { } to qemu\\util\\oslib-win32.c e.g. at line 44
-*   Comment out (#) Capstone (line 508) in qemu\\Makefile
+*   Comment out (#) Capstone (line 508) in qemu\\Makefile (Instead of commenting out capstone line, you can add --disable-capstone to configure arguments in the case if it didn't work.
 *   Build QEMU:
     *   ./configure --enable-gtk --enable-sdl --target-list=x86\_64-softmmu --disable-werror --disable-stack-protector
     *   make
