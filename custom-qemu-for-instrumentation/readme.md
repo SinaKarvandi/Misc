@@ -23,7 +23,7 @@ You have to change the path to save the logs of instrumentation in the `translat
 Take a look at this picture :
 ![QEMU Configuration](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-4.png)
 
-Set the `save_path` to the path you want to save the instrumentation results. (you have to use `%d` in your path as number to add into each instrumentation log.)
+Set the `save_path` to the path you want to save the instrumentation results. (you have to use `%d` in your path as an index to add into each instrumentation log.)
 
 * You can also use `packet_capacity`, modify this constant will increase/decrease the amount of instructions to be saved.
 * If you don't need hex assemlies the undefine `save_assembly_hex_bytes`.
