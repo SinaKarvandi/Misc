@@ -27,9 +27,9 @@ Set the `save_path` to the path you want to save the instrumentation results. (y
 
 * You can also use `packet_capacity`, modify this constant will increase/decrease the amount of instructions to be saved.
 * If you don't need hex assemblies then undefine `save_assembly_hex_bytes`.
-* If you don't need general purpose and r/e flags to be saved then undefine `save_gp_registers`.
-* If you don't wanna see debug messages then undefine `my_debug`.
-* If you undefine `modify_qemu` all the modifications to qemu will be ignored.
+* If you don't need general purpose and r/e flags registers to be saved then undefine `save_gp_registers`.
+* If you don't wanna see the debug messages then undefine `my_debug`.
+* If you undefine `modify_qemu`, all the modifications to qemu will be ignored.
 
 ## Build QEMU
 The build instructions come from : (https://stackoverflow.com/questions/53084815/compile-qemu-under-windows-10-64-bit-for-windows-10-64-bit)
