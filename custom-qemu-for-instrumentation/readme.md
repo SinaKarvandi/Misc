@@ -2,7 +2,7 @@
 
 If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option.
 
-![alt text](http://url/to/img.png)
+![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-1.jpg)
 ## How to use
 
 
