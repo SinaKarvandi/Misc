@@ -5,14 +5,6 @@ If you need a fast way to instrument user/kernel/hypervisor then you have custom
 ## Build 
 The build instructions come from : (https://stackoverflow.com/questions/53084815/compile-qemu-under-windows-10-64-bit-for-windows-10-64-bit)
 
-Finally I managed to compile and run QEMU under Windows 10 Home 64-bit. There are a few pitfalls:
-
-1.  Due to a compiler bug in mingw (see [https://gcc.gnu.org/bugzilla/show\_bug.cgi?id=86832](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=86832) and [https://www.mail-archive.com/qemu-devel@nongnu.org/msg557409.html](https://www.mail-archive.com/qemu-devel@nongnu.org/msg557409.html)), you have to configure QEMU with --disable-stack-protector and (one solution) add the function \_\_stack\_chk\_fail to a source file.
-2.  Configure QEMU with --disable-werror.
-3.  Remove Capstone project from makefile.
-
-* * *
-
 Here's a complete step-by-step guide for compiling qemu-system-x86\_64.exe:
 
 
