@@ -5,6 +5,10 @@ If you need a fast way to instrument user/kernel/hypervisor then you have custom
 **This project only works for x86 and AMD64 emulator version of QEMU.**
 
 ![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-1.jpg)
+
+Instructions (*optionally gp registers and r/e flags) will be saved into files.
+![QEMU Saved Instr. with GP and flags](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-3.png)
+
 ## How to use
 Copy the translate file into your QEMU Source path and replace this file with `/qemu/target/i386/translate.c`.
 
@@ -14,9 +18,9 @@ Make sure to see the below section about configuration.
 You have to change the path to save the logs of instrumentation in the translate.c.
 
 Take a look at this picture :
-![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-4.jpg)
+![QEMU Configuration](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-4.png)
 
-Set the "save_path" to the path you want to save the instrumentation results. (you have to use `%d` in your path as number to add into each instrumentation log.)
+Set the `save_path` to the path you want to save the instrumentation results. (you have to use `%d` in your path as number to add into each instrumentation log.)
 
 * You can also use `packet_capacity`, modify this constant will increase/decrease the amount of instructions to be saved.
 * If you don't need hex assemlies the undefine `save_assembly_hex_bytes`.
@@ -55,5 +59,5 @@ Guide based on: [https://wiki.qemu.org/Hosts/W32#Native\_builds\_with\_MSYS2](ht
 *   Optional (for better performance): Install HAXM according to this guide: [https://www.qemu.org/2017/11/22/haxm-usage-windows/](https://www.qemu.org/2017/11/22/haxm-usage-windows/) and start QEMU with option -accel hax
 
 ## QEMU Architecture
-![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-2.jpg)
+![QEMU Architecture](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-2.jpg)
 
