@@ -13,12 +13,12 @@ Instructions (and optionally gp registers and r/e flags) will be saved into file
 ![QEMU Saved Instr. with GP and flags](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-3.PNG)
 
 ## How to use
-Copy the translate file into your QEMU Source path and replace this file with `/qemu/target/i386/translate.c`.
+Copy the `translate.c` file into your QEMU Source path and replace this file with `/qemu/target/i386/translate.c`.
 
 Make sure to see the below section about configuration.
 
 ## Configuratioon
-You have to change the path to save the logs of instrumentation in the translate.c.
+You have to change the path to save the logs of instrumentation in the `translate.c`.
 
 Take a look at this picture :
 ![QEMU Configuration](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-4.png)
