@@ -1,6 +1,8 @@
 # custom-qemu-for-instrumentation
 
-If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option.
+If you need a fast way to instrument user/kernel/hypervisor then you have custom-qemu-for-instrumentation as a fast and light option. 
+
+**This project only works for x86 and AMD64 emulator version of QEMU.**
 
 ![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-1.jpg)
 ## How to use
@@ -37,4 +39,6 @@ Guide based on: [https://wiki.qemu.org/Hosts/W32#Native\_builds\_with\_MSYS2](ht
 *   Run in qemu/x86\_64-softmmu ./qemu-system-x86\_64 -L ./../pc-bios
 *   Optional (for better performance): Install HAXM according to this guide: [https://www.qemu.org/2017/11/22/haxm-usage-windows/](https://www.qemu.org/2017/11/22/haxm-usage-windows/) and start QEMU with option -accel hax
 
+## QEMU Architecture
+![QEMU Instrumentation](https://github.com/SinaKarvandi/misc/raw/master/Imgs/custom-qemu-2.jpg)
 
