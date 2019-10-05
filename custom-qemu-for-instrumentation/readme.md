@@ -26,7 +26,7 @@ Take a look at this picture :
 Set the `save_path` to the path you want to save the instrumentation results. (you have to use `%d` in your path as an index to add into each instrumentation log.)
 
 * You can also use `packet_capacity`, modify this constant will increase/decrease the amount of instructions to be saved.
-* If you don't need hex assemlies the undefine `save_assembly_hex_bytes`.
+* If you don't need hex assemblies then undefine `save_assembly_hex_bytes`.
 * If you don't need general purpose and r/e flags to be saved then undefine `save_gp_registers`.
 * If you don't wanna see debug messages then undefine `my_debug`.
 * If you undefine `modify_qemu` all the modifications to qemu will be ignored.
