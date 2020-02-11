@@ -1,6 +1,7 @@
 # Custom Message Tracing and Buffer Transformation
 
 This project is extending a Microsoft sample for IRP Pending into a Message Tracing and Buffer Sharing from Kernel mode -> Usermode.
+
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
 
 ## Why you should use it instead of WPP Tracing?
@@ -17,39 +18,39 @@ each chunk has `PacketChunkSize + sizeof(BUFFER_HEADER)` size.
 			 _________________________
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer)	  |
 			| size = PacketChunkSize  |
-			|						  |
+			|			  |
 			|_________________________|
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer)	  |
 			| size = PacketChunkSize  |
-			|						  |
+			|		       	  |
 			|_________________________|
-			|						  |
-			|						  |
-			|						  |
-			|						  |
-			|			.			  |
-			|			.			  |
-			|			.			  |
-			|						  |
-			|						  |
-			|						  |
-			|						  |
+			|		          |
+			|			  |
+			|			  |
+			|			  |
+			|	      .           |
+			|	      .		  |
+			|	      .		  |
+			|			  |
+			|			  |
+			|			  |
+			|			  |
 			|_________________________|
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer)	  |
 			| size = PacketChunkSize  |
-			|						  |
+			|			  |
 			|_________________________|
 			
 ```
