@@ -9,7 +9,7 @@ It's because WPP Tracing needs extra applications to translate the buffer but in
 
 ## Design
 I used DPC and IRP Based Pending mechanisms in Windows to handle messages, you can send both a raw buffer and a message (`sprintf` like format to the usermode.).
-Each core has it's seprate pool for message, you can insert message to another core's pool.
+Each core has it's separate pool for THE message, you can insert message to another core's pool.
 
 A core buffer is like this , it's divided into `MaximumPacketsCapacity` chucks,
 each chunk has `PacketChunkSize + sizeof(BUFFER_HEADER)` size.
@@ -70,7 +70,7 @@ In order to use this event tracing, you can use the following function in you co
 ```
 SendBuffer(UINT32 OperationCode, PVOID Buffer, UINT32 BufferLength, UINT32 CoreIndex);
 ```
-The above method gets the `OperationCode`, this code will be send to the usermode code to describe about the intention of this message, send the buffer and also the length of the buffer + an index to specify the core which you want send your message into its pool.
+The above method gets the `OperationCode`, this code will be sent to the usermode code to describe the intention of this message, send the buffer and also the length of the buffer + an index to specify the core which you want to send your message into its pool.
 
 ```
 BOOLEAN ReadBuffer(UINT32 CoreIndex, PVOID BufferToSaveMessage, UINT32* ReturnedLength);
@@ -83,15 +83,14 @@ Checks whether a special core pool has a new message or not.
 ```
 BOOLEAN SendMessageToQueue(UINT32 OperationCode, UINT32 CoreIndex, const char* Fmt, ...)
 ```
-The above functions is used to send `Printf` and `Sprintf` like buffers to the usermode. e.g. as a message tracing for debugging purpose.
+The above functions are used to send `Printf` and `Sprintf` like buffers to the usermode. e.g. as a message tracing for debugging purposes.
 
 In order to send a special message (look at the .gif above), you can change the following line or put this function everywhere you need.
 ```
 // change the following line
 SendMessageToQueue(0x85, 0, "Sina's answer is %s [%d] and %s - + 0x%x tttuuii", "Hello", counter, "Second Hello", 0x1234);
-```
-
 // end changes
+```
 ## Run the sample
 
 To test this driver, copy the test application, event.exe, and the driver to the same directory, and run the application. The application will automatically load the driver, if it's not already loaded, and interact with the driver. When you exit the app, the driver will be stopped, unloaded, and removed.
@@ -100,7 +99,7 @@ To run the test application, enter the following command in the command window:
 
 `C:\>event.exe <0|1>`
 
-*Only 0 is for transfering buffer from kernel to user, if you use 1 then it's just triggering an event and not passing message buffers.*
+*Only 0 is for transferring buffer from kernel to user, if you use 1 then it's just triggering an event and not passing message buffers.*
 The first command-line parameter, `<0|1>`, specify 0 for IRP-based notification and 1 for event-based notification.
 
 License
