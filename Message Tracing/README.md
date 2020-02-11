@@ -2,7 +2,7 @@
 
 This project is extending a Microsoft sample for IRP Pending into a Message Tracing and Buffer Sharing from Kernel mode -> Usermode.
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](https://github.com/SinaKarvandi/Misc/raw/master/Imgs/Tracer.gif)
 
 ## Why you should use it instead of WPP Tracing?
 It's because WPP Tracing needs extra applications to translate the buffer but instead this messaging mechanism is really simple, you don't need to deal with .etl and .tmf files to read the messages of WPP Tracing.
