@@ -43,39 +43,39 @@ each chunk has PacketChunkSize + sizeof(BUFFER_HEADER) size
 			 _________________________
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer) 	  |
 			| size = PacketChunkSize  |
-			|						  |
+			| 			  |
 			|_________________________|
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer)	  |
 			| size = PacketChunkSize  |
-			|						  |
+			|			  |
 			|_________________________|
-			|						  |
-			|						  |
-			|						  |
-			|						  |
-			|			.			  |
-			|			.			  |
-			|			.			  |
-			|						  |
-			|						  |
-			|						  |
-			|						  |
+			|			  |
+			|			  |
+			|			  |
+			|			  |
+			|	     .		  |
+			|	     .		  |
+			|	     .		  |
+			|			  |
+			|			  |
+			|			  |
+			|			  |
 			|_________________________|
 			|      BUFFER_HEADER      |
 			|_________________________|
-			|						  |
-			|           BODY		  |
-			|         (Buffer)		  |
+			|			  |
+			|           BODY	  |
+			|         (Buffer)	  |
 			| size = PacketChunkSize  |
-			|						  |
+			|			  |
 			|_________________________|
 			
 */
