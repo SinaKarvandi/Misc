@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HypervisorBypassWithNMI", "HypervisorBypassWithNMI\HypervisorBypassWithNMI.vcxproj", "{0098100B-EE58-43E9-9952-9C7B4E3FE89D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM.Build.0 = Debug|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM64.Build.0 = Debug|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x64.ActiveCfg = Debug|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x64.Build.0 = Debug|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x64.Deploy.0 = Debug|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x86.ActiveCfg = Debug|Win32
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x86.Build.0 = Debug|Win32
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Debug|x86.Deploy.0 = Debug|Win32
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM.ActiveCfg = Release|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM.Build.0 = Release|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM.Deploy.0 = Release|ARM
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM64.ActiveCfg = Release|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM64.Build.0 = Release|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|ARM64.Deploy.0 = Release|ARM64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x64.ActiveCfg = Release|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x64.Build.0 = Release|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x64.Deploy.0 = Release|x64
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x86.ActiveCfg = Release|Win32
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x86.Build.0 = Release|Win32
+		{0098100B-EE58-43E9-9952-9C7B4E3FE89D}.Release|x86.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D41542D-DA4D-4DF4-B658-0E7E45D90CE3}
+	EndGlobalSection
+EndGlobal
