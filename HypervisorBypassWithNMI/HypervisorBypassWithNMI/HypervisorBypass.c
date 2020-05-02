@@ -60,10 +60,6 @@ ULONG_PTR IpiBroadcastOnCore(ULONG_PTR context) {
       // Apply the NMI
       //
       __writemsr(MSR_x2APIC_ICR, ICR);
-
-      /*send nmi in x2apic mode.. in xapic mode map lapic in and
-                   use mmio to send nmi. lapic is in MSR IA32_APIC_BASE (
-                   0x1B ) the default address is 0xFEE00000*/
     }
   }
 
